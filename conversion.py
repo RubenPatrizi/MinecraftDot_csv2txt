@@ -1,458 +1,185 @@
 import csv
 
 dic = {
-    "air":"A",
-    "white_wool":"B",
-    "light_gray_wool":"C",
-    "gray_wool":"D",
-    "black_wool":"E",
-    "brown_wool":"F",
-    "red_wool":"G",
-    "orange_wool":"H",
-    "yellow_wool":"I",
-    "lime_wool":"J",
-    "green_wool":"K",
-    "cyan_wool":"L",
-    "light_blue_wool":"M",
-    "blue_wool":"N",
-    "purple_wool":"O",
-    "magenta_wool":"P",
-    "pink_wool":"Q",
-    "white_concrete":"R",
-    "light_gray_concrete":"S",
-    "gray_concrete":"T",
-    "black_concrete":"U",
-    "brown_concrete":"V",
-    "red_concrete":"W",
-    "orange_concrete":"X",
-    "yellow_concrete":"Y",
-    "lime_concrete":"Z",
-    "green_concrete":"A1",
-    "cyan_concrete":"B1",
-    "light_blue_concrete":"C1",
-    "blue_concrete":"D1",
-    "purple_concrete":"E1",
-    "magenta_concrete":"F1",
-    "pink_concrete":"G1",
-    "white_terracotta":"H1",
-    "light_gray_terracotta":"I1",
-    "gray_terracotta":"J1",
-    "black_terracotta":"K1",
-    "brown_terracotta":"L1",
-    "red_terracotta":"M1",
-    "orange_terracotta":"N1",
-    "yellow_terracotta":"O1",
-    "lime_terracotta":"P1",
-    "green_terracotta":"Q1",
-    "cyan_terracotta":"R1",
-    "light_blue_terracotta":"S1",
-    "blue_terracotta":"T1",
-    "purple_terracotta":"U1",
-    "magenta_terracotta":"V1",
-    "pink_terracotta":"W1",
-    "terracotta":"X1",
-    "white_glazed_terracotta":"Y1",
-    "light_gray_glazed_terracotta":"Z1",
-    "gray_glazed_terracotta":"A2",
-    "black_glazed_terracotta":"B2",
-    "brown_glazed_terracotta":"C2",
-    "red_glazed_terracotta":"D2",
-    "orange_glazed_terracotta":"E2",
-    "yellow_glazed_terracotta":"F2",
-    "lime_glazed_terracotta":"G2",
-    "green_glazed_terracotta":"H2",
-    "cyan_glazed_terracotta":"I2",
-    "light_blue_glazed_terracotta":"J2",
-    "blue_glazed_terracotta":"K2",
-    "purple_glazed_terracotta":"L2",
-    "magenta_glazed_terracotta":"M2",
-    "pink_glazed_terracotta":"N2",
-    "white_stained_glass":"O2",
-    "light_gray_stained_glass":"P2",
-    "gray_stained_glass":"Q2",
-    "black_stained_glass":"R2",
-    "brown_stained_glass":"S2",
-    "red_stained_glass":"T2",
-    "orange_stained_glass":"U2",
-    "yellow_stained_glass":"V2",
-    "lime_stained_glass":"W2",
-    "green_stained_glass":"X2",
-    "cyan_stained_glass":"Y2",
-    "light_blue_stained_glass":"Z2",
-    "blue_stained_glass":"A3",
-    "purple_stained_glass":"B3",
-    "magenta_stained_glass":"C3",
-    "pink_stained_glass":"D3",
-    "nether_quartz_ore":"E3",
-    "coal_ore":"F3",
-    "iron_ore":"G3",
-    "redstone_ore":"H3",
-    "lapis_ore":"I3",
-    "gold_ore":"J3",
-    "emerald_ore":"K3",
-    "diamond_ore":"L3",
-    "deepslate_coal_ore":"M3",
-    "deepslate_iron_ore":"N3",
-    "deepslate_redstone_ore":"O3",
-    "deepslate_lapis_ore":"P3",
-    "deepslate_gold_ore":"Q3",
-    "deepslate_emerald_ore":"R3",
-    "deepslate_diamond_ore":"S3",
-    "nether_bricks":"T3",
-    "cut_sandstone":"U3",
-    "sandstone":"V3",
-    "mossy_cobblestone":"W3",
-    "cobblestone":"X3",
-    "stone":"Y3",
-    "chiseled_stone_bricks":"Z3",
-    "mossy_stone_bricks":"A4",
-    "stone_bricks":"B4",
-    "diorite":"C4",
-    "polished_diorite":"D4",
-    "andesite":"E4",
-    "polished_andesite":"F4",
-    "granite":"G4",
-    "polished_granite":"H4",
-    "dirt":"I4",
-    "clay":"J4",
-    "netherrack":"K4",
-    "prismarine_bricks":"L4",
-    "dark_prismarine":"M4",
-    "oak_wood":"N4",
-    "birch_wood":"O4",
-    "spruce_wood":"P4",
-    "dark_oak_wood":"Q4",
-    "acacia_wood":"R4",
-    "jungle_wood":"S4",
-    "oak_planks":"T4",
-    "birch_planks":"U4",
-    "spruce_planks":"V4",
-    "dark_oak_planks":"W4",
-    "acacia_planks":"X4",
-    "jungle_planks":"Y4",
-    "crimson_planks":"Z4",
-    "quartz_block":"A5",
-    "obsidian":"B5",
-    "redstone_block":"C5",
-    "lapis_block":"D5",
-    "gold_block":"E5",
-    "emerald_block":"F5",
-    "diamond_block":"G5",
-    "glowstone":"H5",
-    "jack_o_lantern":"I5",
-    "sea_lantern":"J5",
-    "shroomlight":"K5",
+    "air":                               ["air","aria"],
+    "white_wool":                        ["white wool","lana bianca"],
+    "light_gray_wool":                   ["light gray_wool","lana grigio chiaro"],
+    "gray_wool":                         ["gray wool","lana grigia"],
+    "black_wool":                        ["black wool","lana nera"],
+    "brown_wool":                        ["brown wool","lana marrone"],
+    "red_wool":                          ["red wool","lana rossa"],
+    "orange_wool":                       ["orange wool","lana arancione"],
+    "yellow_wool":                       ["yellow wool","lana gialla"],
+    "lime_wool":                         ["lime wool","lana lime"],
+    "green_wool":                        ["green wool","lana verde"],
+    "cyan_wool":                         ["cyan wool","lana ciano"],
+    "light_blue_wool":                   ["light blue wool","lana azzurra"],
+    "blue_wool":                         ["blue wool","lana blu"],
+    "purple_wool":                       ["purple wool","lana viola"],
+    "magenta_wool":                      ["magenta wool","lana magenta"],
+    "pink_wool":                         ["pink wool","lana rosa"],
+    "white_concrete":                    ["white concrete","calcestruzzo bianco"],
+    "light_gray_concrete":               ["light gray concrete","calcestruzzo grigio chiaro"],
+    "gray_concrete":                     ["gray concrete","calcestruzzo grigio"],
+    "black_concrete":                    ["black concrete","calcestruzzo nero"],
+    "brown_concrete":                    ["brown concrete","calcestruzzo marrone"],
+    "red_concrete":                      ["red concrete","calcestruzzo rosso"],
+    "orange_concrete":                   ["orange concrete","calcestruzzo arancione"],
+    "yellow_concrete":                   ["yellow concrete","calcestruzzo giallo"],
+    "lime_concrete":                     ["lime concrete","calcestruzzo lime"],
+    "green_concrete":                    ["green concrete","calcestruzzo verde"],
+    "cyan_concrete":                     ["cyan concrete","calcestruzzo ciano"],
+    "light_blue_concrete":               ["light blue concrete","calcestruzzo azzurro"],
+    "blue_concrete":                     ["blue concrete","calcestruzzo blu"],
+    "purple_concrete":                   ["purple concrete","calcestruzzo viola"],
+    "magenta_concrete":                  ["magenta concrete","calcestruzzo magenta"],
+    "pink_concrete":                     ["pink concrete","calcestruzzo rosa"],
+    "white_terracotta":                  ["white terracotta","terracotta bianca"],
+    "light_gray_terracotta":             ["light gray terracotta","terracotta grigio chiaro"],
+    "gray_terracotta":                   ["gray terracotta","terracotta grigia"],
+    "black_terracotta":                  ["black terracotta","terracotta nera"],
+    "brown_terracotta":                  ["brown terracotta","terracotta marrone"],
+    "red_terracotta":                    ["red terracotta","terracotta rossa"],
+    "orange_terracotta":                 ["orange terracotta","terracotta arancione"],
+    "yellow_terracotta":                 ["yellow terracotta","terracotta gialla"],
+    "lime_terracotta":                   ["lime terracotta","terracotta lime"],
+    "green_terracotta":                  ["green terracotta","terracotta verde"],
+    "cyan_terracotta":                   ["cyan terracotta","terracotta ciano"],
+    "light_blue_terracotta":             ["light blue terracotta","terracotta azzurra"],
+    "blue_terracotta":                   ["blue terracotta","terracotta blu"],
+    "purple_terracotta":                 ["purple terracotta","terracotta viola"],
+    "magenta_terracotta":                ["magenta terracotta","terracotta magenta"],
+    "pink_terracotta":                   ["pink terracotta","terracotta rosa"],
+    "terracotta":                        ["terracotta","terracotta"],
+    "white_glazed_terracotta":           ["white glazed terracotta","terracotta smaltata bianca"],
+    "light_gray_glazed_terracotta":      ["light gray glazed_terracotta","terracotta smaltata grigio chia"],
+    "gray_glazed_terracotta":            ["gray glazed terracotta","terracotta smaltata grigia"],
+    "black_glazed_terracotta":           ["black glazed terracotta","terracotta smaltata nera"],
+    "brown_glazed_terracotta":           ["brown glazed terracotta","terracotta smaltata marrone"],
+    "red_glazed_terracotta":             ["red glazed terracotta","terracotta smaltata rossa"],
+    "orange_glazed_terracotta":          ["orange glazed terracotta","terracotta smaltata arancione"],
+    "yellow_glazed_terracotta":          ["yellow_glazed terracotta","terracotta smaltata gialla"],
+    "lime_glazed_terracotta":            ["lime glazed terracotta","terracotta smaltata lime"],
+    "green_glazed_terracotta":           ["green glazed terracotta","terracotta smaltata verde"],
+    "cyan_glazed_terracotta":            ["cyan glazed terracotta","terracotta smaltata ciano"],
+    "light_blue_glazed_terracotta":      ["light blue glazed terracotta","terracotta smaltata azzurra"],
+    "blue_glazed_terracotta":            ["blue glazed terracotta","terracotta smaltata blu"],
+    "purple_glazed_terracotta":          ["purple glazed terracotta","terracotta smaltata viola"],
+    "magenta_glazed_terracotta":         ["magenta glazed terracotta","terracotta smaltata magenta"],
+    "pink_glazed_terracotta":            ["pink glazed terracotta","terracotta smaltata rosa"],
+    "white_stained_glass":               ["white stained glass","vetro bianco"],
+    "light_gray_stained_glass":          ["light gray stained_glass","vetro grigio chiaro"],
+    "gray_stained_glass":                ["gray stained glass","vetro grigio"],
+    "black_stained_glass":               ["black stained glass","vetro nero"],
+    "brown_stained_glass":               ["brown stained glass","vetro marrone"],
+    "red_stained_glass":                 ["red stained glass","vetro rosso"],
+    "orange_stained_glass":              ["orange stained glass","vetro arancione"],
+    "yellow_stained_glass":              ["yellow stained glass","vetro giallo"],
+    "lime_stained_glass":                ["lime stained glass","vetro lime"],
+    "green_stained_glass":               ["green stained glass","vetro verde"],
+    "cyan_stained_glass":                ["cyan stained glass","vetro ciano"],
+    "light_blue_stained_glass":          ["light blue stained glass","vetro azzurro"],
+    "blue_stained_glass":                ["blue stained glass","vetro blu"],
+    "purple_stained_glass":              ["purple stained glass","vetro viola"],
+    "magenta_stained_glass":             ["magenta stained glass","vetro magenta"],
+    "pink_stained_glass":                ["pink stained glass","vetro rosa"],
+    "nether_quartz_ore":                 ["nether quartz ore","quarzo del nether"],
+    "coal_ore":                          ["coal ore","minerale di carbone"],
+    "iron_ore":                          ["iron ore","minerale di ferro"],
+    "redstone_ore":                      ["redstone ore","minerale di redstone"],
+    "lapis_ore":                         ["lapis ore","minerale di lapislazzuli"],
+    "gold_ore":                          ["gold ore","minerale di oro"],
+    "emerald_ore":                       ["emerald ore","minerale di smeraldo"],
+    "diamond_ore":                       ["diamond ore","minerale di diamante"],
+    "deepslate_coal_ore":                ["deepslate coal ore","minerale di carbone in ardesia profonda"],
+    "deepslate_iron_ore":                ["deepslate iron ore","minerale di ferro in ardesia profonda"],
+    "deepslate_redstone_ore":            ["deepslate redstone ore","minerale di redstone in ardesia profonda"],
+    "deepslate_lapis_ore":               ["deepslate lapis ore","minerale di lapislazzuli in ardesia profonda"],
+    "deepslate_gold_ore":                ["deepslate gold ore","minerale di oro in ardesia profonda"],
+    "deepslate_emerald_ore":             ["deepslate emerald ore","minerale di smeraldo in ardesia profonda"],
+    "deepslate_diamond_ore":             ["deepslate diamond ore","minerale di diamante in ardesia profonda"],
+    "nether_bricks":                     ["nether bricks","mattoni del nether"],
+    "cut_sandstone":                     ["cut sandstone","arenaria incisa"],
+    "sandstone":                         ["sandstone","arenaria"],
+    "mossy_cobblestone":                 ["mossy cobblestone","pietrisco muschioso"],
+    "cobblestone":                       ["cobblestone","pietrisco"],
+    "stone":                             ["stone","pietra"],
+    "chiseled_stone_bricks":             ["chiseled stone bricks","mattoni di pietra cesellati"],
+    "mossy_stone_bricks":                ["mossy stone bricks","mattoni di pietra muschiosi"],
+    "stone_bricks":                      ["stone bricks","mattoni di pietra"],
+    "diorite":                           ["diorite","diorite"],
+    "polished_diorite":                  ["polished diorite","diorite levigata"],
+    "andesite":                          ["andesite","andesite"],
+    "polished_andesite":                 ["polished andesite","andesite levigata"],
+    "granite":                           ["granite","granito"],
+    "polished_granite":                  ["polished granite","granito levigato"],
+    "dirt":                              ["dirt","terra"],
+    "clay":                              ["clay","argilla"],
+    "netherrack":                        ["netherrack","netherrack"],
+    "prismarine_bricks":                 ["prismarine bricks","mattoni di prismarina"],
+    "dark_prismarine":                   ["dark prismarine","prismarina scura"],
+    "oak_wood":                          ["oak wood","legno di quercia"],
+    "birch_wood":                        ["birchwood","legno di betulla"],
+    "spruce_wood":                       ["spruce wood","legno di abete"],
+    "dark_oak_wood":                     ["dark_oak wood","legno di quercia scura"],
+    "acacia_wood":                       ["acacia wood","legno di acacia"],
+    "jungle_wood":                       ["jungle wood","legno della giungla"],
+    "oak_planks":                        ["oak planks","assi di quercia"],
+    "birch_planks":                      ["birch planks","assi di betulla"],
+    "spruce_planks":                     ["spruce planks","assi di abete"],
+    "dark_oak_planks":                   ["dark_oak planks","assi di quercia scura"],
+    "acacia_planks":                     ["acacia planks","assi di acacia"],
+    "jungle_planks":                     ["jungle planks","assi della giungla"],
+    "crimson_planks":                    ["crimson planks","assi cremisi"],
+    "quartz_block":                      ["quartz block","blocco di quarzo"],
+    "obsidian":                          ["obsidian","ossidiana"],
+    "redstone_block":                    ["redstone block","blocco di redstone"],
+    "lapis_block":                       ["lapis block","blocco di lapislazzuli"],
+    "gold_block":                        ["gold block","blocco d'oro"],
+    "emerald_block":                     ["emerald block","blocco di smeraldo"],
+    "diamond_block":                     ["diamond block","blocco di diamante"],
+    "glowstone":                         ["glowstone","luminite"],
+    "jack_o_lantern":                    ["jack o' lantern","lanterna di zucca"],
+    "sea_lantern":                       ["sea lantern","lanterna marina"],
+    "shroomlight":                       ["shroomlight","fungolume"]
 }
 
-cid_en = {
-    "A":"air",
-    "B":"white wool",
-    "C":"light gray_wool",
-    "D":"gray wool",
-    "E":"black wool",
-    "F":"brown wool",
-    "G":"red wool",
-    "H":"orange wool",
-    "I":"yellow wool",
-    "J":"lime wool",
-    "K":"green wool",
-    "L":"cyan wool",
-    "M":"light blue wool",
-    "N":"blue wool",
-    "O":"purple wool",
-    "P":"magenta wool",
-    "Q":"pink wool",
-    "R":"white concrete",
-    "S":"light gray concrete",
-    "T":"gray concrete",
-    "U":"black concrete",
-    "V":"brown concrete",
-    "W":"red concrete",
-    "X":"orange concrete",
-    "Y":"yellow concrete",
-    "Z":"lime concrete",
-    "A1":"green concrete",
-    "B1":"cyan concrete",
-    "C1":"light blue concrete",
-    "D1":"blue concrete",
-    "E1":"purple concrete",
-    "F1":"magenta concrete",
-    "G1":"pink concrete",
-    "H1":"white terracotta",
-    "I1":"light gray terracotta",
-    "J1":"gray terracotta",
-    "K1":"black terracotta",
-    "L1":"brown terracotta",
-    "M1":"red terracotta",
-    "N1":"orange terracotta",
-    "O1":"yellow terracotta",
-    "P1":"lime terracotta",
-    "Q1":"green terracotta",
-    "R1":"cyan terracotta",
-    "S1":"light blue terracotta",
-    "T1":"blue terracotta",
-    "U1":"purple terracotta",
-    "V1":"magenta terracotta",
-    "W1":"pink terracotta",
-    "X1":"terracotta",
-    "Y1":"white glazed terracotta",
-    "Z1":"light gray glazed_terracotta",
-    "A2":"gray glazed terracotta",
-    "B2":"black glazed terracotta",
-    "C2":"brown glazed terracotta",
-    "D2":"red glazed terracotta",
-    "E2":"orange glazed terracotta",
-    "F2":"yellow_glazed terracotta",
-    "G2":"lime glazed terracotta",
-    "H2":"green glazed terracotta",
-    "I2":"cyan glazed terracotta",
-    "J2":"light blue glazed terracotta",
-    "K2":"blue glazed terracotta",
-    "L2":"purple glazed terracotta",
-    "M2":"magenta glazed terracotta",
-    "N2":"pink glazed terracotta",
-    "O2":"white stained glass",
-    "P2":"light gray stained_glass",
-    "Q2":"gray stained glass",
-    "R2":"black stained glass",
-    "S2":"brown stained glass",
-    "T2":"red stained glass",
-    "U2":"orange stained glass",
-    "V2":"yellow stained glass",
-    "W2":"lime stained glass",
-    "X2":"green stained glass",
-    "Y2":"cyan stained glass",
-    "Z2":"light blue stained glass",
-    "A3":"blue stained glass",
-    "B3":"purple stained glass",
-    "C3":"magenta stained glass",
-    "D3":"pink stained glass",
-    "E3":"nether quartz ore",
-    "F3":"coal ore",
-    "G3":"iron ore",
-    "H3":"redstone ore",
-    "I3":"lapis ore",
-    "J3":"gold ore",
-    "K3":"emerald ore",
-    "L3":"diamond ore",
-    "M3":"deepslate coal ore",
-    "N3":"deepslate iron ore",
-    "O3":"deepslate redstone ore",
-    "P3":"deepslate lapis ore",
-    "Q3":"deepslate gold ore",
-    "R3":"deepslate emerald ore",
-    "S3":"deepslate diamond ore",
-    "T3":"nether bricks",
-    "U3":"cut sandstone",
-    "V3":"sandstone",
-    "W3":"mossy cobblestone",
-    "X3":"cobblestone",
-    "Y3":"stone",
-    "Z3":"chiseled stone bricks",
-    "A4":"mossy stone bricks",
-    "B4":"stone bricks",
-    "C4":"diorite",
-    "D4":"polished diorite",
-    "E4":"andesite",
-    "F4":"polished andesite",
-    "G4":"granite",
-    "H4":"polished granite",
-    "I4":"dirt",
-    "J4":"clay",
-    "K4":"netherrack",
-    "L4":"prismarine bricks",
-    "M4":"dark prismarine",
-    "N4":"oak wood",
-    "O4":"birchwood",
-    "P4":"spruce wood",
-    "Q4":"dark_oak wood",
-    "R4":"acacia wood",
-    "S4":"jungle wood",
-    "T4":"oak planks",
-    "U4":"birch planks",
-    "V4":"spruce planks",
-    "W4":"dark_oak planks",
-    "X4":"acacia planks",
-    "Y4":"jungle planks",
-    "Z4":"crimson planks",
-    "A5":"quartz block",
-    "B5":"obsidian",
-    "C5":"redstone block",
-    "D5":"lapis block",
-    "E5":"gold block",
-    "F5":"emerald block",
-    "G5":"diamond block",
-    "H5":"glowstone",
-    "I5":"jack o' lantern",
-    "J5":"sea lantern",
-    "K5":"shroomlight",
+lanId = {
+    "EN": 0,
+    "IT": 1
 }
 
-cid_it = {
-    "A":"aria",
-    "B":"lana bianca",
-    "C":"lana grigio chiaro",
-    "D":"lana grigia",
-    "E":"lana nera",
-    "F":"lana marrone",
-    "G":"lana rossa",
-    "H":"lana arancione",
-    "I":"lana gialla",
-    "J":"lana lime",
-    "K":"lana verde",
-    "L":"lana ciano",
-    "M":"lana azzurra",
-    "N":"lana blu",
-    "O":"lana viola",
-    "P":"lana magenta",
-    "Q":"lana rosa",
-    "R":"calcestruzzo bianco",
-    "S":"calcestruzzo grigio chiaro",
-    "T":"calcestruzzo grigio",
-    "U":"calcestruzzo nero",
-    "V":"calcestruzzo marrone",
-    "W":"calcestruzzo rosso",
-    "X":"calcestruzzo arancione",
-    "Y":"calcestruzzo giallo",
-    "Z":"calcestruzzo lime",
-    "A1":"calcestruzzo verde",
-    "B1":"calcestruzzo ciano",
-    "C1":"calcestruzzo azzurro",
-    "D1":"calcestruzzo blu",
-    "E1":"calcestruzzo viola",
-    "F1":"calcestruzzo magenta",
-    "G1":"calcestruzzo rosa",
-    "H1":"terracotta bianca",
-    "I1":"terracotta grigio chiaro",
-    "J1":"terracotta grigia",
-    "K1":"terracotta nera",
-    "L1":"terracotta marrone",
-    "M1":"terracotta rossa",
-    "N1":"terracotta arancione",
-    "O1":"terracotta gialla",
-    "P1":"terracotta lime",
-    "Q1":"terracotta verde",
-    "R1":"terracotta ciano",
-    "S1":"terracotta azzurra",
-    "T1":"terracotta blu",
-    "U1":"terracotta viola",
-    "V1":"terracotta magenta",
-    "W1":"terracotta rosa",
-    "X1":"terracotta",
-    "Y1":"terracotta smaltata bianca",
-    "Z1":"terracotta smaltata grigio chia",
-    "A2":"terracotta smaltata grigia",
-    "B2":"terracotta smaltata nera",
-    "C2":"terracotta smaltata marrone",
-    "D2":"terracotta smaltata rossa",
-    "E2":"terracotta smaltata arancione",
-    "F2":"terracotta smaltata gialla",
-    "G2":"terracotta smaltata lime",
-    "H2":"terracotta smaltata verde",
-    "I2":"terracotta smaltata ciano",
-    "J2":"terracotta smaltata azzurra",
-    "K2":"terracotta smaltata blu",
-    "L2":"terracotta smaltata viola",
-    "M2":"terracotta smaltata magenta",
-    "N2":"terracotta smaltata rosa",
-    "O2":"vetro bianco",
-    "P2":"vetro grigio chiaro",
-    "Q2":"vetro grigio",
-    "R2":"vetro nero",
-    "S2":"vetro marrone",
-    "T2":"vetro rosso",
-    "U2":"vetro arancione",
-    "V2":"vetro giallo",
-    "W2":"vetro lime",
-    "X2":"vetro verde",
-    "Y2":"vetro ciano",
-    "Z2":"vetro azzurro",
-    "A3":"vetro blu",
-    "B3":"vetro viola",
-    "C3":"vetro magenta",
-    "D3":"vetro rosa",
-    "E3":"quarzo del nether",
-    "F3":"minerale di carbone",
-    "G3":"minerale di ferro",
-    "H3":"minerale di redstone",
-    "I3":"minerale di lapislazzuli",
-    "J3":"minerale di oro",
-    "K3":"minerale di smeraldo",
-    "L3":"minerale di diamante",
-    "M3":"minerale di carbone in ardesia profonda",
-    "N3":"minerale di ferro in ardesia profonda",
-    "O3":"minerale di redstone in ardesia profonda",
-    "P3":"minerale di lapislazzuli in ardesia profonda",
-    "Q3":"minerale di oro in ardesia profonda",
-    "R3":"minerale di smeraldo in ardesia profonda",
-    "S3":"minerale di diamante in ardesia profonda",
-    "T3":"mattoni del nether",
-    "U3":"arenaria incisa",
-    "V3":"arenaria",
-    "W3":"pietrisco muschioso",
-    "X3":"pietrisco",
-    "Y3":"pietra",
-    "Z3":"mattoni di pietra cesellati",
-    "A4":"mattoni di pietra muschiosi",
-    "B4":"mattoni di pietra",
-    "C4":"diorite",
-    "D4":"diorite levigata",
-    "E4":"andesite",
-    "F4":"andesite levigata",
-    "G4":"granito",
-    "H4":"granito levigato",
-    "I4":"terra",
-    "J4":"argilla",
-    "K4":"netherrack",
-    "L4":"mattoni di prismarina",
-    "M4":"prismarina scura",
-    "N4":"legno di quercia",
-    "O4":"legno di betulla",
-    "P4":"legno di abete",
-    "Q4":"legno di quercia scura",
-    "R4":"legno di acacia",
-    "S4":"legno della giungla",
-    "T4":"assi di quercia",
-    "U4":"assi di betulla",
-    "V4":"assi di abete",
-    "W4":"assi di quercia scura",
-    "X4":"assi di acacia",
-    "Y4":"assi della giungla",
-    "Z4":"assi cremisi",
-    "A5":"blocco di quarzo",
-    "B5":"ossidiana",
-    "C5":"blocco di redstone",
-    "D5":"blocco di lapislazzuli",
-    "E5":"blocco d'oro",
-    "F5":"blocco di smeraldo",
-    "G5":"blocco di diamante",
-    "H5":"luminite",
-    "I5":"lanterna di zucca",
-    "J5":"lanterna marina",
-    "K5":"fungolume"
-}
+of = {"IT": "di",
+      "EN": "of"}
+rowWord = {"IT": "Riga",
+           "EN": "Row"}
+required = {"IT": "Blocchi necessari",
+            "EN": "Required blocks"}
+total = {"IT": "Totale blocchi",
+         "EN": "Total blocks"}
 
 def read_file(path):
-    n1 = 0
-    n2 = -1
-    x = [[[]]]
-    y = [[]]
+    posx = 0
+    posy = -1
+    table = [[[]]]
+    mat = [[]]
 
     file = csv.reader(open(path, newline='', mode='r'), delimiter=',')
 
-    for i in file:
-        if n2 == -1:
-            width = int(i[-1])
-        if n1 % width == 0:
-            n2 += 1
-            n1 = 0
-            if n2 > 0:
-                x.insert(n2,y.copy())
-        x[n2].insert(n1,i)
-        n1 += 1
-    return x
+    for row in file:
+        if posy == -1:
+            width = int(row[-1])
+        if posx % width == 0:
+            posy += 1
+            posx = 0
+            if posy > 0:
+                table.insert(posy,mat.copy())   # insert a matrix for each row
+        table[posy].insert(posx,row)     # insert rows in each matrix
+        posx += 1
+    return table
 
 def convert_to_text(table,lan):
+    lanID = lanId[lan]  # array index of language
     try:
         text = ""
         width = int(table[0][0][-1])
@@ -472,7 +199,7 @@ def convert_to_text(table,lan):
                     table[i].pop(j)
                     break
                 while k < len(table[i][j]):
-                    table[i][j][k] = table[i][j][k][10:]
+                    table[i][j][k] = table[i][j][k][10:]      # remove "minecraft:" from entries
                     k += 1
                 if end != 0:
                     break
@@ -502,7 +229,7 @@ def convert_to_text(table,lan):
 
         for i in range(0,height):
             for j in range(0,width):
-                code[i][j] = dic.get(pixel_map[i][j])
+                code[i][j] = dic.get(pixel_map[i][j])[lanID]
 
         code.pop(height)
 
@@ -511,10 +238,7 @@ def convert_to_text(table,lan):
             tot = 0
             r += 1
             j = 0
-            if lan == "IT":
-                text += f"\nRiga {r}::\n"
-            if lan == "EN":
-                text += f"\nRow {r}::\n"
+            text += f"\n# {rowWord[lan]} {r}::\n"
             for i in range(0,width):
                 if j == width:
                     break
@@ -530,37 +254,24 @@ def convert_to_text(table,lan):
                     if j == width:
                         break
                 i = j
-                if start+1 == tot:
-                    if lan == "IT":
-                        text += f"{cnt} di {cid_it.get(pixel)}  ({tot})\n"
-                    if lan == "EN":
-                        text += f"{cnt} of {cid_en.get(pixel)}  ({tot})\n"
-                else:
-                    if lan == "IT":
-                        text += f"{cnt} di {cid_it.get(pixel)}  ({start + 1} - {tot})\n"
-                    if lan == "EN":
-                        text += f"{cnt} of {cid_en.get(pixel)}  ({start + 1} - {tot})\n"
 
-        ingredientList.pop(0)
+                text += f"{cnt} {of[lan]} {pixel} "
+                if start+1 == tot:
+                    text += f"({tot})\n"
+                else:
+                    text += f"({start + 1} - {tot})\n"
+
+        ingredientList.pop(0)          # row[0] is the block name, row[1] is the total
         for row in ingredientList:
-            row[0] = row[0][10:]
-        if lan == "IT":
-            text += "\n\n\nBlocchi necessari:\n"
-        if lan == "EN":
-            text += "\n\n\nRequired blocks:\n"
+            row[0] = row[0][10:]                  # remove "minecraft:"
+        text += f"\n\n\n{required[lan]}:\n"
         blockTotal = 0
         for ingredient in ingredientList:
-            blockCode = dic.get(ingredient[0])
-            if blockCode != "A":
-                if lan == "IT":
-                    text += f"{cid_it.get(blockCode)}: {ingredient[1]}\n"
-                if lan == "EN":
-                    text += f"{cid_en.get(blockCode)}: {ingredient[1]}\n"
+            block = dic.get(ingredient[0])[lanID]
+            if block != dic.get("air")[lanID]:            # exclude air from counting
+                text += f"-{block}: {ingredient[1]}\n"
                 blockTotal += int(ingredient[1])
-        if lan == "IT":
-            text += f"\nTotale blocchi: {blockTotal}\n"
-        if lan == "EN":
-            text += f"\nTotal blocks: {blockTotal}\n"
+        text += f"\n{total[lan]}: {blockTotal}\n"
         return text
 
     except:

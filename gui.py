@@ -2,7 +2,6 @@ from sys import exit
 import tkinter
 import tkinter.filedialog
 import customtkinter as c
-from typing import Union
 from conversion import *
 
 c.set_appearance_mode("Dark")  # Modes: "System" (standard), "Dark", "Light"
@@ -31,7 +30,7 @@ class dimWindow(c.CTkToplevel):
         self.confirm_button = c.CTkButton(self, height=30, width=100, text="Confirm",font=default_font, fg_color="green",hover_color="dark green", command=self.save_info)
         self.confirm_button.place(relx=0.3, rely=0.6)
 
-        self.info = c.CTkLabel(self, text="Choose language of the list")
+        self.info = c.CTkLabel(self, text="Choose output language")
         self.info.grid(row=7, columnspan=8)
 
     def save_info(self):
